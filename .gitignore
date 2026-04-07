@@ -1,0 +1,25 @@
+# Ignore dataset folders
+data/
+images/
+models/
+PetImages/
+
+# Ignore large files
+*.h5
+*.keras
+*.ckpt
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environment
+venv/
+.env
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/

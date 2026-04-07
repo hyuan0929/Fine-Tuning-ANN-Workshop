@@ -1,40 +1,88 @@
-MNIST Convolutional Neural Network (CNN) Lab
+# Fine Tuning ANN Workshop
 
-Learning Objectives:
+## 📌 Project Overview
+This project demonstrates how to use transfer learning with a pre-trained VGG16 model to classify images of cats and dogs.
 
-- Understand the architecture and training process of Convolutional Neural Networks (CNNs) using Keras and TensorFlow.
-- Learn how to preprocess image data for use in deep learning models.
-- Compare the performance of CNNs to dense (fully connected) neural networks on the MNIST digit classification task.
-- Gain experience with model evaluation, prediction, and saving/exporting models in modern Keras.
+We implemented:
+- Feature extraction (baseline model)
+- Fine-tuning (unfreezing top layers)
+- Performance comparison
+- Data augmentation (bonus)
 
-Instructions:
+---
 
-This notebook provides a step-by-step guide to building, training, and evaluating a CNN for the MNIST handwritten digit dataset. You will:
+## 🎯 Objectives
+- Understand the difference between feature extraction and fine-tuning
+- Modify a pre-trained model for a new task
+- Evaluate model performance improvements
 
-- Explore the MNIST dataset and visualize sample images.
-- Build and train a CNN model for digit classification.
-- Compare the CNN's performance to a dense neural network.
-- Practice making predictions and interpreting model outputs.
-- Learn about saving and exporting models in Keras 3.
+---
 
-Assignment Preparation:
+## 👥 Group Information
+**Group Name:** Group 1  
 
-This notebook is your starting point for a future assignment on Convolutional Neural Networks and image classification.
+**Group Members:**
+- Ce Chen (Student ID: 9007166)  
+- Haibo Yuan (Student ID: 9010929)  
+- Zhuoran Zhang (Student ID: 9048508)
 
-- You will use the concepts and code patterns from this lab to tackle a more advanced classification problem: distinguishing between images of dogs and cats.
-- Make sure you understand each step, as you will be asked to adapt and extend this workflow for the dogs/cats dataset in your assignment.
+---
 
-Next Steps:
+## 📊 Methodology
 
-- Look at the 11 topics in the **ConvolutionalNeuralNetworks notebook**.
-- Hit the links in the table, run the demos, and understand the CNN architectures.
-- Open and read the 7 notebooks in the **CourseNotebooks folder**.
-- Execute all the code cells and answer the challenge questions in each notebook.
-- Experiment with changing the model architecture, training parameters, or data preprocessing to see how it affects performance.
-- Save your work and keep this notebook for reference when you begin the dogs/cats classification assignment.
+### 1. Data Preparation
+- Split dataset into training, validation, and test sets
+- Removed corrupted images to avoid training errors
 
-----------------------------------------
+### 2. Feature Extraction (Baseline)
+- Used VGG16 with `include_top=False`
+- Froze all convolutional layers
+- Trained only the classifier
 
-Happy Learning!
+### 3. Fine-Tuning
+- Unfroze top convolutional layers
+- Used a smaller learning rate
+- Improved validation accuracy
 
-If you have questions, refer to the Keras and TensorFlow documentation or ask your instructor for guidance.
+### 4. Performance Comparison
+- Compared baseline vs fine-tuned model
+- Observed slight improvement in validation accuracy
+- Detected overfitting from accuracy gap
+
+### 5. Bonus: Data Augmentation
+- Applied transformations (rotation, flip, zoom, etc.)
+- Reduced overfitting and improved generalization
+
+---
+
+## 📈 Results
+- Baseline validation accuracy: ~90%
+- Fine-tuned validation accuracy: ~91%
+- Data augmentation improved model stability
+
+---
+
+## 🧠 Key Insights
+- Transfer learning provides strong baseline performance
+- Fine-tuning helps adapt high-level features
+- Overfitting is a common issue
+- Data augmentation improves generalization
+
+---
+
+## ⚙️ Technologies Used
+- Python
+- TensorFlow / Keras
+- Matplotlib
+- Jupyter Notebook
+
+---
+
+## ⚠️ Notes
+- The dataset is not included in this repository (see `.gitignore`)
+- Please download the dataset separately before running the notebook
+
+---
+
+## 🔗 GitHub Repository
+https://github.com/hyuan0929/Fine-Tuning-ANN-Workshop
