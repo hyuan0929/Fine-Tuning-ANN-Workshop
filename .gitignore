@@ -4,6 +4,8 @@ images/
 models/
 PetImages/
 
+.history
+
 # Ignore large files
 *.h5
 *.keras

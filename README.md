@@ -26,6 +26,9 @@ We implemented:
 - Haibo Yuan (Student ID: 9010929)  
 - Zhuoran Zhang (Student ID: 9048508)
 
+## Main Notebook
+- 05D_fine_tuning_vgg16.ipynb
+
 ---
 
 ## 📊 Methodology
